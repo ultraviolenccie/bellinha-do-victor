@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Victor + Bellinha</title>
+  <style>
+    body {
+      background-color: #ffc0cb;
+      text-align: center;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      padding: 50px;
+      overflow-x: hidden;
+    }
+
+    .figurinhas {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .figurinhas img {
+      width: 150px;
+      height: auto;
+    }
+
+    #mensagens {
+      display: none;
+      margin-top: 30px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .mensagem {
+      color: #ff69b4;
+      font-size: 24px;
+      animation: wave 2s infinite;
+      margin: 10px 0;
+    }
+
+    @keyframes wave {
+      0% { transform: translateY(0); }
+      25% { transform: translateY(-5px); }
+      50% { transform: translateY(5px); }
+      75% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+
+    #gifs {
+      margin-top: 20px;
+      display: none;
+    }
+
+    #gifs img {
+      width: 150px;
+      margin: 10px;
+      border-radius: 12px;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 20px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <audio id="musica" loop autoplay>
+    <source src="https://archive.org/download/thecardigans-step-on-me/TheCardigans-StepOnMe.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <div class="figurinhas">
+    <img src="https://i.pinimg.com/originals/3b/c1/8e/3bc18e694bcaef4623ff39f65cbf9844.png" alt="My Melody">
+    <img src="https://static.wikia.nocookie.net/sanrio/images/e/e0/Badtzmaru_full.png" alt="Badtz-Maru">
+  </div>
+
+  <button onclick="mostrarMensagem()">Entrar</button>
+
+  <div id="mensagens">
+    <div class="mensagem">bellinha é somente do victor e te ama muitao 💖</div>
+    <div class="mensagem">bellinha é somente do victor e te ama muitao 💖</div>
+    <div class="mensagem">bellinha é somente do victor e te ama muitao 💖</div>
+    <div class="mensagem">bellinha é somente do victor e te ama muitao 💖</div>
+    <div class="mensagem">bellinha é somente do victor e te ama muitao 💖</div>
+  </div>
+
+  <div id="gifs">
+    <img src="https://media.tenor.com/4W1FzFi5u3UAAAAC/cute-cat.gif" alt="Gatinho fofo 1">
+    <img src="https://media.tenor.com/0AVv-O3U2HcAAAAC/cat-love.gif" alt="Gatinho fofo 2">
+    <img src="https://media.tenor.com/K6v0g5qv0DoAAAAC/love-cat.gif" alt="Gatinho fofo 3">
+  </div>
+
+  <script>
+    function mostrarMensagem() {
+      document.getElementById('mensagens').style.display = 'block';
+      document.getElementById('gifs').style.display = 'block';
+      document.getElementById('musica').play();
+    }
+  </script>
+
+</body>
+</html>
